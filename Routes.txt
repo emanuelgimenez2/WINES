@@ -1,0 +1,51 @@
+Products
+            GET    url: http://localhost:3001/products
+    Detail  GET    url: http://localhost:3001/products/detail/1
+            POST   url: http://localhost:3001/products
+                        {"name": "Vino TORO Tetra",
+                         "price": 250,"place": 1,"categ": 1,"summary": "Vino tinto Fulero",
+                         "producer": 1,"alcohol": "45%",
+                         "image": "https://http2.mlstatic.com/D_NQ_NP_734474-MLA50030342693_052022-O.webp"
+                         }
+
+todavia no  PUT    url: http://localhost:3001/products
+            DELETE url: http://localhost:3001/products  BOD( {"id":1})
+            
+Place  -- Ubicacion          
+            GET    url: http://localhost:3001/location
+            POST   url: http://localhost:3001/location  
+                           BODY {"description":"Mendoza, San Rafael"}
+            PUT    url: http://localhost:3001/location?id_place=44
+                           BODY{"id_place"=44,"description":"San Rafael, Mendoza, Argentina"}
+            DELETE url: http://localhost:3001/location/:id_place
+
+Productor
+            GET    url: http://localhost:3001/productor
+            POST   url: http://localhost:3001/productor  BODY {"description":"Quilmes"}
+            PUT    url: http://localhost:3001/productor
+            DELETE url: http://localhost:3001/productor
+
+Filtros     GET   url: http://localhost:3001/filters/product BODY {"type":"Blanco"}
+            
+PROFILE
+
+            GET    url: http://localhost:3001/profile
+    Detail  GET    url: http://localhost:3001/User/perfil?profile=1
+            POST   url: http://localhost:3001/profile
+            PUT    url: http://localhost:3001/profile?id=1
+            DELETE url: http://localhost:3001/profile?id=1
+
+USERS            
+            GET    url: http://localhost:3001/User
+            POST   url: http://localhost:3001/User
+                BODY {"email":"jhonadm@g.com","full_name":"Jhon Surname","profile":"1","status":1}
+            PUT    url: http://localhost:3001/User?id=4 
+                BODY {"email":"jhonadministra@gmail.com","full_name":"Jhon Administrator","profile":"1","status":1}
+            DELETE url: http://localhost:3001/User?id=4
+
+ORDER
+            POST   url: http://localhost:3001/orders
+            GET    url: http://localhost:3001/orders?user_id=12 req.query
+            PUT    url: http://localhost:3001/orders?ID=1          QUERY / BODY
+            DELETE url: http://localhost:3001/orders?ID=1
+
