@@ -9,9 +9,7 @@ import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { UpdateDireccion } from "../../actions/action";
 
-const url = "https://back-pgvinos.herokuapp.com";
-
-// const url = "http://localhost:3001" 
+const url = "http://localhost:3001" 
 
 export function validate(direccion) {
   let errors = {};

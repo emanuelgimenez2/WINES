@@ -22,9 +22,9 @@ import {
   GET_ROL,
 } from "./constant";
 
-const url = "https://back-pgvinos.herokuapp.com";
+//const url = "https://back-pgvinos.herokuapp.com";
 
-// const url = "http://localhost:3001" 
+const url = "http://localhost:3001" 
 
 export function addStock(id,suma) {
   return async function (dispatch) {
