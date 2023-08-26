@@ -117,7 +117,7 @@ export default function Navbar() {
             <ShoppingCartBtn />
           </div>
         </ul>
-        <div className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6">
+        {/* <div className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6">
           {!isAuthenticated ? (
             <button
               onClick={() => loginWithRedirect()}
@@ -143,7 +143,7 @@ export default function Navbar() {
                 })
               )
             : null}
-        </div>
+        </div> */}
       </nav>
       <style>{`
       .hideMenuNav {
