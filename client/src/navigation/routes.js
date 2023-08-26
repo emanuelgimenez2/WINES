@@ -28,21 +28,21 @@ const msj = "Ud. debe tener ser administrador para acceder a esta página";
 
 
 function HandleRoutes() {
-  const { user } = useAuth0();
-  const dispatch = useDispatch();
-  const [userRole, setUserRole] = useState(false);
+  // const { user } = useAuth0();
+  // const dispatch = useDispatch();
+  // const [userRole, setUserRole] = useState(false);
 
-  const id = user && user.sub;
+  // const id = user && user.sub;
 
-  const handleSearchForUserRoleApi = async () => {
-    let res = await dispatch(getUserById(id));
+  // const handleSearchForUserRoleApi = async () => {
+  //   let res = await dispatch(getUserById(id));
 
-    res.role && setUserRole(res.role);
-  };
+  //   res.role && setUserRole(res.role);
+  // };
 
-  useEffect(() => {
-    id && handleSearchForUserRoleApi();
-  }, [id]);
+  // useEffect(() => {
+  //   id && handleSearchForUserRoleApi();
+  // }, [id]);
 
 
   const routes = [
@@ -131,6 +131,12 @@ function HandleRoutes() {
     {
       path: "/about",
       element: <About />,
+      exact: true,
+      private: false,
+    },
+    {
+      path: '/*',
+      element: <Error msj='DIRECCION NO VALIDA'/>,
       exact: true,
       private: false,
     },
